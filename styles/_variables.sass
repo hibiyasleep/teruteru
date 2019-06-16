@@ -1,0 +1,24 @@
+
+$primary: #FBE7B4
+$secondary: #93D3FF
+
+@mixin text-thick-shadow($dx: 0.5rem, $dy: 0.75rem)
+  position: relative
+
+  &::after
+    display: block
+    content: ''
+
+    width: calc(100% + #{$dx})
+    height: calc(100% - #{$dy})
+
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: $dx / -2
+    margin: auto
+
+    background: rgba(0, 0, 0, 0.75)
+    z-index: -1
+    -webkit-filter: blur(0.25rem)
