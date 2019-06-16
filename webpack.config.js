@@ -4,6 +4,7 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
 const ArchivePlugin = require('webpack-archive-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry: './index.js',
@@ -136,6 +137,9 @@ if (process.env.NODE_ENV === 'production') {
     }
   }
   module.exports.plugins = (module.exports.plugins || []).concat([
+    new CopyPlugin([
+      { from: './assets', to: 'assets' }
+    ]),
     new ArchivePlugin({
       output: `dist/teruteru-${package.version}`,
       format: 'tar'
