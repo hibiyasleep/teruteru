@@ -12,15 +12,15 @@
       </div>
       <ul class="nav">
         <li @click="() => $refs.changelog.scrollIntoView()">
-          <img class="weather-icon" src="/assets/icon/060277.png" />
+          <img class="weather-icon" src="../../assets/icon/060277.png" />
         </li>
         <!-- Changelog -->
         <li @click="() => $refs.common.scrollIntoView()">
-          <img class="weather-icon" src="/assets/icon/060201.png" />
+          <img class="weather-icon" src="../../assets/icon/060201.png" />
         </li>
         <!-- 기본 -->
         <li @click="() => $refs.credits.scrollIntoView()">
-          <img class="weather-icon" src="/assets/icon/060269.png" />
+          <img class="weather-icon" src="../../assets/icon/060269.png" />
         </li>
         <!-- Credits -->
       </ul>
@@ -28,11 +28,21 @@
     <div class="content">
       <section>
         <header ref="changelog">
-          <img class="weather-icon" src="/assets/icon/060277.png" />
+          <img class="weather-icon" src="../../assets/icon/060277.png" />
           Changelog
         </header>
         <p class="changelog">
-          <img class="weather-icon" src="/assets/icon/060216.png" />
+          <img class="weather-icon" src="../../assets/icon/060201.png" />
+          <b> 0.1.1 'Virtual Sunrise' </b>
+          <ul>
+            <li> 설정 페이지 아이콘 문제 수정 </li>
+            <li> 위치 확인불가 오류 추가 </li>
+            <li> 정렬 방향 설정 추가 </li>
+            <li> 크기조절 추가 </li>
+          </ul>
+        </p>
+        <p class="changelog">
+          <img class="weather-icon" src="../../assets/icon/060216.png" />
           <b> 0.1.0 'snow storm' </b>
           <ul>
             <li> 첫 릴리즈 </li>
@@ -41,7 +51,7 @@
       </section>
       <section>
         <header ref="common">
-          <img class="weather-icon" src="/assets/icon/060218.png" />
+          <img class="weather-icon" src="../../assets/icon/060218.png" />
           기본
         </header>
         <label class="settings-block">
@@ -97,19 +107,19 @@
       </section>
       <section>
         <header ref="credits">
-          <img class="weather-icon" src="/assets/icon/060269.png" />
+          <img class="weather-icon" src="../../assets/icon/060269.png" />
           Credits
         </header>
         <label class="settings-block">
-          <img class="weather-icon" src="/assets/icon/060256.png" />
+          <img class="weather-icon" src="../../assets/icon/060256.png" />
           히비야 <i> @hibiyasleep </i>
         </label>
         <header>
-          <img class="weather-icon" src="/assets/icon/060214.png" />
+          <img class="weather-icon" src="../../assets/icon/060214.png" />
           Special Thanks
         </header>
         <label class="settings-block">
-          <img class="weather-icon" src="/assets/icon/060260.png" />
+          <img class="weather-icon" src="../../assets/icon/060260.png" />
           모카 <i> @Life_is_FF14 </i>
         </label>
       </section>

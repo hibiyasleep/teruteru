@@ -68,9 +68,8 @@ module.exports = {
         test: /\.(png|jpg|gif)$/,
         loader: 'file-loader',
         options: {
-          name: '[name].[ext]?[hash]',
-          publicPath: './assets',
-          outputPath: 'assets/'
+          name: '[path][name].[ext]',
+          useRelativePath: true
         }
       }
     ]
@@ -138,7 +137,11 @@ if (process.env.NODE_ENV === 'production') {
   }
   module.exports.plugins = (module.exports.plugins || []).concat([
     new CopyPlugin([
-      { from: './assets', to: 'assets' }
+      {
+        from: './assets',
+        to: 'assets',
+        ignore: [ '.DS_Store' ]
+      }
     ]),
     new ArchivePlugin({
       output: `dist/teruteru-${package.version}`,
