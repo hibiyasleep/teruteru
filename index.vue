@@ -1,11 +1,17 @@
 <template>
   <div>
-    <nav v-if="opened_window === 'hello'" @click="close">
+    <nav v-if="ui_state === 'hello' || !pwd" @click="close">
       {{ name }} v{{ version }} '{{ releasename }}'
-      <br /> 날씨 아이콘을 클릭해서 메뉴를 열 수 있습니다.
+      <br />
+      <label v-if="!pwd">
+        위치를 확인할 수 없습니다.
+      </label>
+      <label v-else>
+        날씨 아이콘을 클릭해서 메뉴를 열 수 있습니다.
+      </label>
     </nav>
     <overlay />
-    <settings v-if="opened_window === 'settings'"/>
+    <settings v-if="ui_state === 'settings'"/>
   </div>
 </template>
 
@@ -32,7 +38,7 @@ export default {
     close() { this.$store.commit('ui/close') }
   },
   computed: {
-    ...mapState('ui', [ 'opened_window' ])
+    ...mapState('ui', [ 'ui_state' ])
   },
   mounted() {
     if(packageinfo.version !== this.$store.state.settings.last_version) {

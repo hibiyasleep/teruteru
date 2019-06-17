@@ -5,7 +5,7 @@
     </header>
     <ul class="weather-wrap">
       <slot
-        v-if="opened_window === 'edit'"
+        v-if="ui_state === 'edit'"
         :static-weather="rate.length <= 1"></slot>
       <template v-if="rate.length > 1">
         <weather-cell
@@ -36,7 +36,7 @@ export default {
   },
   methods: {
     toggle_edit_mode() {
-      const state = this.$store.state.ui.opened_window
+      const state = this.$store.state.ui.ui_state
       if(state === 'edit') {
         this.$store.commit('ui/close')
       } else if(state === 'hello' || !state) {
@@ -50,7 +50,7 @@ export default {
       'remain'
     ]),
     ...mapState('ui', [
-      'opened_window'
+      'ui_state'
     ]),
     ...mapState('settings', [
       'show_current_weather',

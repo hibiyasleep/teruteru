@@ -2,17 +2,17 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 
 const _state = () => ({
-  opened_window: 'hello'
+  ui_state: 'hello'
 })
 
 export default {
   state: _state(),
   mutations: {
     open(state, window) {
-      state.opened_window = window
+      state.ui_state = window
     },
     close(state) {
-      state.opened_window = null
+      state.ui_state = null
     }
   },
   getters: {

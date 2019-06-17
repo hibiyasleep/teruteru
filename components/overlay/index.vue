@@ -26,7 +26,7 @@
         </label>
       </li>
     </region>
-    <template v-if="opened_window !== 'settings'">
+    <template v-if="ui_state !== 'settings'">
       <region v-for="(region, index) in pinned_regions" :id="region" :key="region">
         <li
           @click="move_up_pinned(index)"
@@ -92,7 +92,7 @@ export default {
   },
   computed: {
     ...mapState('ui', [
-      'opened_window'
+      'ui_state'
     ]),
     ...mapState('settings', [
       'pwd',
