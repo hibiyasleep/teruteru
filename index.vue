@@ -1,10 +1,13 @@
 <template>
   <div>
-    <nav v-if="ui_state === 'hello' || !pwd" @click="close">
+    <nav v-if="ui_state === 'hello' || ui_state === 'updated' || !pwd" @click="close">
       {{ name }} v{{ version }} '{{ releasename }}'
       <br />
       <label v-if="!pwd">
         위치를 확인할 수 없습니다.
+      </label>
+      <label v-else-if="ui_state === 'updated'">
+        업데이트되었습니다.
       </label>
       <label v-else>
         날씨 아이콘을 클릭해서 메뉴를 열 수 있습니다.
