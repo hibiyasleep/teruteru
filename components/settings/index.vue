@@ -12,15 +12,15 @@
       </div>
       <ul class="nav">
         <li @click="() => $refs.changelog.scrollIntoView()">
-          <img src="/assets/icon/060277.png" />
+          <img class="weather-icon" src="/assets/icon/060277.png" />
         </li>
         <!-- Changelog -->
         <li @click="() => $refs.common.scrollIntoView()">
-          <img src="/assets/icon/060201.png" />
+          <img class="weather-icon" src="/assets/icon/060201.png" />
         </li>
         <!-- 기본 -->
         <li @click="() => $refs.credits.scrollIntoView()">
-          <img src="/assets/icon/060269.png" />
+          <img class="weather-icon" src="/assets/icon/060269.png" />
         </li>
         <!-- Credits -->
       </ul>
@@ -28,11 +28,11 @@
     <div class="content">
       <section>
         <header ref="changelog">
-          <img src="/assets/icon/060277.png" />
+          <img class="weather-icon" src="/assets/icon/060277.png" />
           Changelog
         </header>
         <p class="changelog">
-          <img src="/assets/icon/060216.png" />
+          <img class="weather-icon" src="/assets/icon/060216.png" />
           <b> 0.1.0 'snow storm' </b>
           <ul>
             <li> 첫 릴리즈 </li>
@@ -41,7 +41,7 @@
       </section>
       <section>
         <header ref="common">
-          <img src="/assets/icon/060201.png" />
+          <img class="weather-icon" src="/assets/icon/060218.png" />
           기본
         </header>
         <label class="settings-block">
@@ -86,19 +86,19 @@
       </section>
       <section>
         <header ref="credits">
-          <img src="/assets/icon/060269.png" />
+          <img class="weather-icon" src="/assets/icon/060269.png" />
           Credits
         </header>
         <label class="settings-block">
-          <img src="/assets/icon/060256.png" />
+          <img class="weather-icon" src="/assets/icon/060256.png" />
           히비야 <i> @hibiyasleep </i>
         </label>
         <header>
-          <img src="/assets/icon/060214.png" />
+          <img class="weather-icon" src="/assets/icon/060214.png" />
           Special Thanks
         </header>
         <label class="settings-block">
-          <img src="/assets/icon/060260.png" />
+          <img class="weather-icon" src="/assets/icon/060260.png" />
           모카 <i> @Life_is_FF14 </i>
         </label>
       </section>

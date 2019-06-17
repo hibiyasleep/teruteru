@@ -1,6 +1,6 @@
 <template>
   <li class="weather-cell">
-    <img :src="`./assets/icon/${weather.image}.png`" :alt="weathername" />
+    <img class="weather-icon" :src="`./assets/icon/${weather.image}.png`" :alt="weathername" />
     <label class="hover"> {{ weathername }} </label>
     <label v-if="step === -1">
       ---
