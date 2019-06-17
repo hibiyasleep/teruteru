@@ -68,11 +68,11 @@
         <label class="settings-block">
           <input
             type="number"
-            min="2"
+            min="1" max="10"
             class="weather-shaped-button"
             v-model="predict_length"
             @click="adjust_number('predict_length', +1)"
-            @contextmenu="adjust_number('predict_length', -1)" />
+            @click.right.prevent="adjust_number('predict_length', -1)" />
           예보할 단위시간 수
           <i>(좌/우클릭으로 조정)</i>
         </label>
@@ -129,7 +129,7 @@ export default {
   }),
   methods: {
     adjust_number(key, delta) {
-      let after = this[key] + delta
+      let after = parseInt(this[key]) + delta
       if(after < 1 || 10 < after) {
         return
       }
