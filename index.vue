@@ -61,5 +61,11 @@ export default {
 @import styles/index
 @import styles/elements
 
+html, body, #vue-root, .root
+  height: 100%
 
+.root
+  display: flex
+  flex-direction: column
+  align-items: stretch
 </style>

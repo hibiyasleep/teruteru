@@ -70,7 +70,7 @@ export default {
 <style lang="sass">
 
 .region-wrap
-  margin: 0 0 0 0.75rem
+  margin: 0 0.75rem
   color: $primary
   height: 4.375rem
 

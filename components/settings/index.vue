@@ -1,5 +1,5 @@
 <template>
-  <article class="settings-wrap">
+  <main class="settings-wrap">
     <header>
       <button class="weather-shaped-button close" @click="close">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
@@ -103,7 +103,7 @@
         </label>
       </section>
     </div>
-  </article>
+  </main>
 </template>
 
 <script>
@@ -157,7 +157,7 @@ export default {
 <style lang="sass">
 
 .settings-wrap
-  height: calc(100vh - 4.375rem)
+  flex-grow: 100000
   background: rgba(0, 0, 0, 0.25)
 
   > header
@@ -183,6 +183,7 @@ export default {
       h1
         color: $primary
         font-size: 1.25rem
+        margin-top: -0.25rem
 
       h2
         font-size: 0.875rem

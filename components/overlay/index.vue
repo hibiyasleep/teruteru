@@ -1,7 +1,5 @@
 <template>
-  <main :class="[
-    'align-' + (align || 'right')
-  ]">
+  <main :class="[ 'region-list', 'align-' + (align_right? 'right' : 'left') ]">
     <region :id="pwd" v-if="pwd" v-slot="slot">
       <li class="weather-cell button" @click="open('settings')">
         <button class="weather-shaped-button">
@@ -96,7 +94,7 @@ export default {
     ]),
     ...mapState('settings', [
       'pwd',
-      'align',
+      'align_right',
       'pinned_regions'
     ]),
     remain() {
@@ -115,3 +113,13 @@ export default {
 }
 
 </script>
+
+<style lang="sass">
+
+.region-list.align-right
+  text-align: right
+
+  .weather-wrap
+    justify-content: flex-end
+
+</style>
