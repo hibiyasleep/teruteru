@@ -16,7 +16,11 @@
           :remain="remain + (index - 1 - show_current_weather) * 70 / 3 * 60"
           @click.native="toggle_edit_mode" />
       </template>
-      <weather-cell :rate="rate" :step="-1" v-else />
+      <weather-cell
+        :rate="rate"
+        :step="-1"
+        @click.native="toggle_edit_mode"
+        v-else />
     </ul>
   </div>
 </template>
