@@ -42,7 +42,13 @@ const vm = window.rootvm = new Vue({
   el: '#vue-root',
   store,
   template: '<index />',
+  watch: {
+    ['$store.state.settings.ui_scale'](to, from) {
+      this.$store.dispatch('settings/update_style')
+    }
+  },
   mounted() {
+    this.$store.dispatch('settings/update_style')
     setInterval(() => store.commit('weather/tick'), 200)
   }
 })

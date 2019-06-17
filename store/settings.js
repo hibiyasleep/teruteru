@@ -4,11 +4,12 @@ import Vuex from 'vuex'
 const _state = () => ({
   pwd: 0,
   last_version: null,
-  align_left: false,
+  align_right: false,
   abstime: false,
   hide_seconds: false,
   show_current_weather: true,
   predict_length: 5,
+  ui_scale: 5,
   pinned_regions: [ 399 ]
 })
 
@@ -35,6 +36,9 @@ export default {
   getters: {
   },
   actions: {
+    update_style({ state }) {
+      window.document.body.parentElement.style.fontSize = (parseInt(state.ui_scale) + 12) + 'px'
+    }
   },
   namespaced: true
 }

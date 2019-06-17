@@ -78,10 +78,21 @@
         </label>
         <label class="settings-block">
           <input
+            type="number"
+            min="1" max="10"
+            class="weather-shaped-button"
+            v-model="ui_scale"
+            @click="adjust_number('ui_scale', +1)"
+            @click.right.prevent="adjust_number('ui_scale', -1)" />
+          인터페이스 크기
+          <i>(좌/우클릭으로 조정; 기본 4)</i>
+        </label>
+        <label class="settings-block">
+          <input
             type="checkbox"
             class="weather-shaped-button"
-            v-model="align_left" />
-          왼쪽 정렬
+            v-model="align_right" />
+          오른쪽 정렬
         </label>
       </section>
       <section>
@@ -147,7 +158,9 @@ export default {
       'hide_seconds',
       'abstime',
       'show_current_weather',
-      'predict_length'
+      'predict_length',
+      'ui_scale',
+      'align_right'
     ])
   }
 }
