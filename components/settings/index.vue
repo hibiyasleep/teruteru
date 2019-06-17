@@ -16,7 +16,7 @@
         </li>
         <!-- Changelog -->
         <li @click="() => $refs.common.scrollIntoView()">
-          <img class="weather-icon" src="../../assets/icon/060201.png" />
+          <img class="weather-icon" src="../../assets/icon/060218.png" />
         </li>
         <!-- 기본 -->
         <li @click="() => $refs.credits.scrollIntoView()">
