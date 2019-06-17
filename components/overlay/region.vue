@@ -85,6 +85,12 @@ export default {
     > span
       @include text-thick-shadow($dy: 0.75rem)
 
+.weather-wrap
+  display: flex
+  margin: 0
+  padding: 0
+  list-style: none
+
 .weather-cell.disabled
   .weather-shaped-button
     fill: rgba(255, 255, 255, 0.1)

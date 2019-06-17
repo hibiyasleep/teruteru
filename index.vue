@@ -61,10 +61,5 @@ export default {
 @import styles/index
 @import styles/elements
 
-.weather-wrap
-  display: flex
-  margin: 0
-  padding: 0
-  list-style: none
 
 </style>
