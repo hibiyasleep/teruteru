@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <nav v-if="ui_state === 'hello' || ui_state === 'updated' || !pwd" @click="close">
+  <div class="root">
+    <nav v-if="ui_state === 'hello' || ui_state === 'updated' || !pwd" @click="$store.commit('ui/open', pwd? null : 'settings')">
       {{ name }} v{{ version }} '{{ releasename }}'
       <br />
       <label v-if="!pwd">
@@ -38,13 +38,16 @@ export default {
     releasename: packageinfo.releasename
   }),
   methods: {
-    close() { this.$store.commit('ui/close') }
+    open(w) { this.$store.commit('ui/open') }
   },
   computed: {
+    ...mapState('settings', [ 'pwd' ]),
     ...mapState('ui', [ 'ui_state' ])
   },
   mounted() {
-    if(packageinfo.version !== this.$store.state.settings.last_version) {
+    const lv = this.$store.state.settings.last_version
+    if(lv !== packageinfo.version) {
+      this.$store.commit('ui/open', lv? 'updated' : 'hello')
       this.$store.commit('settings/set', {
         k: 'last_version',
         v: packageinfo.version
