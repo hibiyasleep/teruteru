@@ -2,7 +2,7 @@
   <main class="settings-wrap">
     <header>
       <button class="weather-shaped-button close" @click="close">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
           <path d="M3 1.6 l5,5 l5,-5 l1.4,1.4 l-5,5 l5,5 l-1.4,1.4 l-5,-5 l-5,5 l-1.4,-1.4 l5,-5 l-5,-5z" />
         </svg>
       </button>
