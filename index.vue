@@ -71,4 +71,5 @@ html, body, #vue-root, .root
   display: flex
   flex-direction: column
   align-items: stretch
+
 </style>

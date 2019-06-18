@@ -183,6 +183,8 @@ export default {
   flex-grow: 100000
   background: rgba(0, 0, 0, 0.25)
 
+  overflow: auto
+
   > header
     display: flex
     align-items: center
