@@ -180,6 +180,9 @@ export default {
 <style lang="sass">
 
 .settings-wrap
+  display: flex
+  flex-direction: column
+
   flex-grow: 100000
   background: rgba(0, 0, 0, 0.25)
 
@@ -191,6 +194,8 @@ export default {
     position: relative
     height: 3.125rem
     padding: 0.25rem 0.5rem
+
+    flex-shrink: 0
 
     background: rgba(0, 0, 0, 0.25)
 
