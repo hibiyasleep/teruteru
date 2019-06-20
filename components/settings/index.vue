@@ -32,6 +32,15 @@
           Changelog
         </header>
         <p class="changelog">
+          <img class="weather-icon" src="../../assets/icon/060205.png" />
+          <b> 0.1.2 'gone_in_the_morning' </b>
+          <ul>
+            <li> 설정 페이지가 제대로 스크롤되지 않는 문제 수정 </li>
+            <li> 등록되지 않은 지역에서의 오작동 수정 </li>
+            <li> *4.5 데이터는 곧 업데이트될 예정입니다. </li>
+          </ul>
+        </p>
+        <p class="changelog">
           <img class="weather-icon" src="../../assets/icon/060201.png" />
           <b> 0.1.1 'Virtual Sunrise' </b>
           <ul>
