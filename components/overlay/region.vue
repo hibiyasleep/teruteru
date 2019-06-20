@@ -1,9 +1,9 @@
 <template>
   <div class="region-wrap">
     <header>
-      <label> {{ pwd.region[2] }} </label>
+      <label> {{ (pwd.region || ['', '', '???'])[2] }} </label>
     </header>
-    <ul class="weather-wrap">
+    <ul class="weather-wrap" v-if="pwd">
       <slot
         v-if="ui_state === 'edit'"
         :static-weather="rate.length <= 1"></slot>
